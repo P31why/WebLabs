@@ -1,4 +1,4 @@
-document.write("Hello, world<br>");
+﻿document.write("Hello, world<br>");
 for(i=1;i<=10;i++)
 {
 	document.write("Hello, world "+i+"<br>");
@@ -34,5 +34,5 @@ function calculation()
 	var v1=parseInt(document.form1.in1.value);
 	var v2=parseInt(document.form1.in2.value);
 	var v3=v1+v2;
-	document.form1.res.value=v3;
+	document.form1.res.value=v1+" + "+v2+" = "+v3;
 }
