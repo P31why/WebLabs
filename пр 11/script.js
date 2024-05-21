@@ -24,10 +24,12 @@ function ForForm3()
 }
 function ForForm4()
 {
-	var x1=parseInt(document.form4.a.value);
-	var y1=parseInt(document.form4.b.value);
-	var x2=parseInt(document.form4.c.value);
-	var y2=parseInt(document.form4.d.value);
-	document.form4.res1.value=Math.sqrt(Math.pow(x1-0,2)+Math.pow(y1-0));
-	document.form4.res2.value=Math.sqrt(Math.pow(x2-0,2)+Math.pow(y2-0));
+	var x1=document.form4.a.value;
+	var y1=document.form4.b.value;
+	var x2=document.form4.c.value;
+	var y2=document.form4.d.value;
+	var resw1=Math.sqrt(Math.pow(x1,2)+Math.pow(y1,2));
+	var resw2=Math.sqrt(Math.pow(x2,2)+Math.pow(y2,2));
+	document.form4.res1.value=parseInt(resw1);
+	document.form4.res2.value=parseInt(resw2);
 }
