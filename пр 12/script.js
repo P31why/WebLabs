@@ -1,7 +1,7 @@
 function t1(){
 	var x1=document.form1.x.value;
 	if(x1<6){
-		document.form1.y.value=9999999;
+		document.form1.y.value="error";
 	}
 	else{
 		var y1=Math.sqrt(x1-6);
