@@ -32,8 +32,6 @@ function t3(){
 	}
 }
 function t4(){
-	var table=document.getElementById("tableV3");
-
 	for(var i=10; i<99;i++){
 		var b=parseInt(i/10);
 		var b2=i%10;
