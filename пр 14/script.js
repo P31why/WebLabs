@@ -10,8 +10,6 @@ function t1(){
 	}
 }
 function t2(){
-	var table=document.getElementById("tableV2");
-	table.innerHTML="<tr><th> x </th></tr>";
 	var a=parseFloat(document.form2.inputA.value);
 	var b=parseFloat(document.form2.inputB.value);
 	var c=parseFloat(document.form2.inputC.value);
@@ -32,4 +30,24 @@ function t3(){
 			table.innerHTML += "<tr><td>" + x + "</td></tr>";		
 		}		
 	}
+}
+function t4(){
+
+}
+function t5(){
+	var a=document.form5.inputA.value;
+	var p;
+	for(var i=0;i<a.length;i++){
+		for(var j=a.length;j>0;j--){
+			if(a[i]===a[j]){
+				p=true;
+			}
+			else {
+				p=false;
+				break;
+			}
+		}
+	}
+	if(p===false){alert("полиндром");} 
+	else alert("не является полиндромом");
 }
