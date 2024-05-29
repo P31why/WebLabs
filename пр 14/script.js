@@ -27,27 +27,25 @@ function t3(){
 	var b=parseFloat(document.form3.inputB.value);
 	for(var x=a;x<=b;x++){
 		if(x%2!==0){
-			table.innerHTML += "<tr><td>" + x + "</td></tr>";		
+			table.innerHTML += "<tr><td>" + x + "</td></tr>";	
 		}		
 	}
 }
 function t4(){
+	var table=document.getElementById("tableV3");
 
+	for(var i=10; i<99;i++){
+		var b=parseInt(i/10);
+		var b2=i%10;
+		if(Math.pow(b+b2,3)===i*i){alert(i)};		
+	}
 }
 function t5(){
-	var a=document.form5.inputA.value;
-	var p;
-	for(var i=0;i<a.length;i++){
-		for(var j=a.length;j>0;j--){
-			if(a[i]===a[j]){
-				p=true;
-			}
-			else {
-				p=false;
-				break;
-			}
-		}
+	var a=String(document.form5.inputA.value);
+	var p='';
+	for(var i=a.length-1;i>=0;i--){
+		p+=a[i];
 	}
-	if(p===false){alert("полиндром");} 
+	if(p===a){alert("полиндром");} 
 	else alert("не является полиндромом");
 }
