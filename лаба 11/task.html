@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript" src="script.cs"></script>
+	<script type="text/javascript" src="script.js"></script>
 	<title>Левкович Т-193</title>
 </head>
-<body>
+<body onload="scrollMsg();">
+<h3>Расчет площади окружности(Пример 1/2/3)</h3>
+<form name="data">
+Введите радиус окружности:
+<br><input type="text" name="radius"><br>
+<input type="button" name="but" value="Рассчитать площадь" onClick="calc(document.data.radius.value);"><br><br>
+Результат: <input type="text" name="result">
+Введите имя: <input type="text" name="Msg" value="ererg" size=15>
 
+</form>
+<hr>
 </body>
 </html>
