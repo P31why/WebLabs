@@ -1,7 +1,7 @@
 
-
+start();
 function start(){
-	var i=parseInt(document.form1.inputTime.value);
+	var i=document.form1.input.value;
 	let tim=setInterval(()=>{
 	i--;
 	document.form1.Time.value=i;

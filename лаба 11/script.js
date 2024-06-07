@@ -36,12 +36,12 @@ function StartTime(){
 	if(status===true){
 		document.data.startB.value="Start";
 		status=false;
-		//setTimeout(() => { clearInterval(ind); alert('stop'); },1000);
+		setTimeout(() => { clearInterval(ind); alert('stop'); },1000);
 	}
 	if(status===false){
 		document.data.startB.value="Stop";
 		status=true;
-		//Clocker();
+		Clocker();
 	}
 }
 function StopTime(){
