@@ -13,9 +13,11 @@ function funcRes(){
 	var start=parseFloat(document.form1.input1.value);
 	var end=parseFloat(document.form1.input2.value);
 	var step=parseFloat(document.form1.input3.value);
-	table.innerHTML="<tr><th> x </th><th>y</th></tr>";
-	for(var i=start;i<end;i+=step){
-		var y=(i-1)/Math.pow(i,2);
-		table.innerHTML += "<tr><td>" + i + "</td><td>" + y + "</td></tr>";
+	if(start<end & (step<start | step>start & step<end) & step>0 & start>0 & end>0){
+		table.innerHTML="<tr><th> x </th><th>y</th></tr>";
+		for(var i=start;i<end;i+=step){
+			var y=(i-1)/Math.pow(i,2);
+			table.innerHTML += "<tr><td>" + i + "</td><td>" + y + "</td></tr>";
+		}
 	}
 }
