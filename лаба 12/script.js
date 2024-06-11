@@ -8,3 +8,8 @@ function start(){
 	},1000);
 	setTimeout(() => { clearInterval(tim); alert('stop'); },i*1000);
 }
+function addInList(){
+	 var list = document.getElementById("list");
+	 var el=document.form1.inputEl.value;
+	 list.innerHTML += "<li>"+el+"</li>";
+}
