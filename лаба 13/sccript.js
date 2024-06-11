@@ -1,11 +1,14 @@
+var znach=[];
+var func =[];
 function introDay(){
 	var time=new Date();
 	var hours=time.getHours();
 	var text;
-	if(hours>7 & hours<12)text='Доброе утро';
-	else if(hours>12 & hours<17)text='Добрый день';
+	alert(hours);
+	if(hours>7 & hours<=12)text='Доброе утро';
+	else if(hours>12 & hours<=17)text='Добрый день';
 	else if(hours>17 & hours<0)text='Добрый вечер';
-	else if(hours>0 & hours<7)text='Доброй ночи';
+	else if(hours>0 & hours<=7)text='Доброй ночи';
 	alert(text);
 }
 function funcRes(){
@@ -18,6 +21,9 @@ function funcRes(){
 		for(var i=start;i<end;i+=step){
 			var y=(i-1)/Math.pow(i,2);
 			table.innerHTML += "<tr><td>" + i + "</td><td>" + y + "</td></tr>";
+			znach.push(i);
+			func.push(y);
 		}
 	}
+	alert(znach);
 }
