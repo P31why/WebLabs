@@ -1,12 +1,16 @@
 
-start();
+//start();
 function start(){
-	var i=document.form1.input.value;
+	var i=30;
+	var te=parseInt(document.getElementById("ty"));
 	let tim=setInterval(()=>{
-	i--;
-	document.form1.Time.value=i;
+	if(i===0){
+		clearInterval(tim);}
+		else{
+			i--;
+			te.textContent=i;
+		}
 	},1000);
-	setTimeout(() => { clearInterval(tim); alert('stop'); },i*1000);
 }
 function addInList(){
 	 var list = document.getElementById("list");
