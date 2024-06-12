@@ -1,7 +1,7 @@
 
-//start();
+start();
 function start(){
-	var i=30;
+	var i=parseInt(document.getElementById("ty"));;
 	var te=parseInt(document.getElementById("ty"));
 	let tim=setInterval(()=>{
 	if(i===0){
