@@ -1,10 +1,17 @@
 var a=1;
-function color_change() {
+function text_change() {
 	if(a===1){
-		document.getElementsByClassName('text')[0].innerHTML ="red";
+		var but=document.getElementById('button');
+		but.value='Текст изменен';
+		a=2;
+	}
+	else if(a===2){
+		var but=document.getElementById('button');
+		but.value='Текст';
+		a=1;
 	}
 }
 function fun1(){
-	var b=document.getElementById('input_num').value;
-	alert(Math.Pow(b,2));
+	var sq=document.getElementById('input_num').value;
+	alert('Результат вычислений: '+Math.pow(sq,2));
 }
