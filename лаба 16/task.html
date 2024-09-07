@@ -4,19 +4,27 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="text/javascript" src="script.js"></script>
-	<title></title>
+	<title>Лаба 16 | Левкович</title>
+	<style type="text/css">
+		.button_st{
+			background-color: tomato;
+			padding: 8px;
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+	</style>
 </head>
 <body>
 <form name="form1">
 	<p id="text" class="text">Нажмите на кнопку для изменения текста</p>
-	<input type="button" id="button" value="Текст" onclick="text_change();">
+	<input class="button_st" type="button" id="button" value="Текст" onclick="text_change();">
 	<hr>
 	<p>Введите <b>число</b> в поле и нажмите на кнопку <b>"Вычислить"</b><br>для вычисления его квадрата</p>
 	<input type="number" id="input_num">
-	<input type="button" id="button_c" onclick="fun1();" value="Вычислить">
+	<input type="button" id="button_c" class="button_st" onclick="fun1();" value="Вычислить">
 	<hr>
-	<p>Нажмите на кнопку "Обмен" для передачи текста между полями</p><br>
-	<input id="in1" type='text'><input type='text' id="in2"><input type="button" onclick="fun2();">
+	<p>Нажмите на кнопку для передачи текста между полями</p>
+	<input id="in1" type='text'><input type="button" class="button_st" value="Обмен" onclick="fun2();"><input type='text' id="in2">
 </form>
 </body>
 </html>

@@ -1,4 +1,5 @@
 function fun1(){
-	
-	alert(screen.width);
+	document.getElementById('text').innerHTML='Ширина окна пользователя '+screen.width
+	+' | Высота окна пользователя '+ screen.height+' | Ширина окна '+window.innerWidth
+	+' | Высота окна '+window.innerHeight;
 }
