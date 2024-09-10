@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Лаба 17 | Левкович</title>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h3>Пример 1</h3>
+        <form name="Sum1">
+            Первое число<input type="text" name="number1"><br>
+            Второе число<input type="text" name="number2"><br>
+            <input type="button" name="but"
+                value="Вычислить сумму"
+                onclick="document.forms[0].elements[3].value=
+                parseInt(document.forms[0].elements[0].value)+
+                parseInt(document.forms[0].elements[1].value);"
+                ><br><br>
+            <input type="text" name="result">
+        </form>
+        <hr>
+        <h3>Пример 2</h3>
+        <form name="Sum2">
+            Первое число<input type="text" name="number1"><br>
+            Второе число<input type="text" name="number2"><br>
+            <input type="button" name="but"
+                value="Вычислить сумму"
+                onclick="document.Sum2.result.value=
+                parseInt(document.Sum2.number1.value)+
+                parseInt(document.Sum2.number2.value);"
+                ><br><br>
+            <input type="text" name="result">
+        </form>
+        <hr>
+        <h3>Пример 3</h3>
+        <form name="Sum3">
+            Первое число<input type="text" name="number1"><br>
+            Второе число<input type="text" name="number2"><br>
+            <input type="button" name="but"
+                value="Вычислить сумму"
+                onclick="summa()"
+                ><br><br>
+            <input type="text" name="result">
+        </form>
+        <hr>
+        <h3>Пример 4</h3>
+        
+    </body>
+</html>
