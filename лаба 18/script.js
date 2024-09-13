@@ -1,4 +1,4 @@
-var images=['header_ctt.png','icon(512).png','images.jpg','unnamed.png'];
+var images=['header_ctt.png','icon(512).png','images.jpg','unnamed.png','1.png','Obito_Uchiha.png'];
 var count=0;
 var folder='pictures/';
 function loadFirst(){

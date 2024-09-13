@@ -6,14 +6,15 @@
             .content{
                 border: 1px solid black;
                 width: 100%; /* Ширина области */
-                height: 400px; /* Высота области */
+                height: 500px; /* Высота области */
                 margin: 0; /* Обнуляем отступы */
                 overflow: hidden; /* Прячем всё за пределами */
                 min-width: 600px;
             }
-            figure img { 
-                width: 100%; /* Ширина изображений */
-                margin: -10% 0 0 0; /* Сдвигаем вверх */
+            img {
+                max-width: 100%; /* Максимальная ширина – 100% */
+  max-height: 500px; /* Максимальная высота – 500px */
+  height: auto; /* Высота автоматическая */
             }
             .wrapper{
                 width: 100%; /* Ширина изображений */
