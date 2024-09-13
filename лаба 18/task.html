@@ -5,24 +5,27 @@
         <style>
             .content{
                 border: 1px solid black;
+                width: 100%; /* Ширина области */
+                height: 400px; /* Высота области */
+                margin: 0; /* Обнуляем отступы */
+                overflow: hidden; /* Прячем всё за пределами */
+                min-width: 600px;
+            }
+            figure img { 
+                width: 100%; /* Ширина изображений */
+                margin: -10% 0 0 0; /* Сдвигаем вверх */
             }
             .wrapper{
-                max-width: 1170px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 50px;
-                padding-left: 16px;
-                padding-right: 16px;
-                background-color: #8ce533;
-            }
-            body{
-                background-color: #7ab53e;
+                width: 100%; /* Ширина изображений */
+                margin: -10% 0 0 0; /* Сдвигаем вверх */
             }
         </style>
         <title>Лаба 18 | Левкович</title>
     </head>
     <body onload="loadFirst()">
-        <div class="wrapper"><img id="image" src=""><br></div>
+        <div class="content"><div class=".wrapper">
+            <img id="image" src=""></div>
+        <br></div>
         
         <input type="button" value="<---" onclick="previosImage()">
         <input type="button" value="--->" onclick="nextImage()">
