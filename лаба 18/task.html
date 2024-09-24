@@ -32,16 +32,20 @@
     </head>
     <body onload="loadFirst()">
         <div class="content"><div class=".wrapper">
-            <img id="image" src=""></div>
+            <img name="thum" id="image" src=""></div>
         <br></div>
         
         <input class="button" type="button" value="Next" onclick="nextImage()">
         <input class="button" type="button" value="Previous" onclick="previosImage()">
-        <ul>
-            <li>Первое</li>
-            <li>Второе</li>
-            <li>Третье</li>
-            <li>Четвертое</li>
-        </ul>
+        <form name="f">
+            <select name="load" onchange="loadIm(f)">
+                <option value="image1" onmouseenter="imOver(event)">Первое
+                <option value="image2">Второе
+                <option value="image3">Третье
+                <option value="image4">Четвертое
+            </select>
+        </form>
+        <input type="button" value="time" onclick="TimeButton()">
+        <p id="countdown">10</p> <!-- Отобразится обратный отсчёт -->
     </body>
 </html>
