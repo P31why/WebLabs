@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .wrap{
+                margin-top: 20px;
+                background-color: aqua;
+            }
+        </style>
+        <title>Лаба 19 | Левкович</title>
+    </head>
+    <body>
+        <div class="wrap">
+            <button class="btn">Click</button>
+            <button class="btn2">Click 2</button>
+            <button class="btnTwo">Click 3(2)</button>
+        </div>
+        <div class="wrap">
+            <button class="btn3">Click31</button>
+            <button class="btn3">Click32</button>
+            <button class="btn3">Click33</button>
+        </div>
+        <script>
+            const button=document.querySelector('.btn');
+            button.addEventListener('click',function(){
+                console.log('click');
+            });
+            const button2=document.querySelector('.btn2');
+            function handleClick(e){
+                console.log('click 2o2uo934hfo;ieg',e.target);
+            }
+            button2.addEventListener('click',handleClick);
+            button3=document.querySelector('.btnTwo');
+            button3.addEventListener('click',handleClick);
+            button3.removeEventListener('click',handleClick);
+
+            const buttons= document.querySelectorAll('.btn3');
+            buttons.forEach((buttons) => {
+                buttons.addEventListener('click',handleClick);
+            });
+        </script>
+    </body>
+</html>
