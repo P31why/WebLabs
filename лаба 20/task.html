@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .box{
+                background-color: aqua;
+            }
+            .hs{
+                margin-left: 470px;
+                margin-right: 470px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class=".box">
+            <img id="hand" src="hand.png" width="200px" height="200px">
+        </div>
+        <script>
+            var start = null;
+            var element = document.getElementById("cl");
+            var element = document.getElementById("hand");
+            function step(timestamp) {
+                if (!start) start = timestamp;
+                var progress = timestamp - start;
+                element.style.transform =
+                    "translateY(" + Math.min(progress / 5, 800) + "px)";
+                if (progress < 2000) {
+                    window.requestAnimationFrame(step);
+                }
+                else{
+                    window.requestAnimationFrame(step);
+                }
+            }
+            function step2(timestamp) {
+                if (!start) start = timestamp;
+                var progress = timestamp - start;
+                element.style.transform =
+                    "translateY(" + Math.min(progress + 5, 800) - "px)";
+                if (progress < 2000) {
+                    window.requestAnimationFrame(step2);
+                }
+            }
+            window.requestAnimationFrame(step);
+            window.requestAnimationFrame(step2);
+        </script>
+        
+    </body>
+</html>
+<script>/*
+    const circle = document.getElementById('circle');
+    let start = null;
+    const duration = 3000; 
+
+    function animate(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+
+        
+        const top = Math.min(100, (progress / duration) * 100);
+        const scale = 1 - (progress / duration) * 0.9;
+        circle.style.top = top + '%';
+        circle.style.transform = scale(${scale}) rotate(${progress / duration * 360}deg);
+
+        if (progress < duration) {
+            requestAnimationFrame(animate);
+        } else {
+            start = null; 
+            requestAnimationFrame(animate); 
+        }
+    }
+
+    requestAnimationFrame(animate);*/
+</script>
