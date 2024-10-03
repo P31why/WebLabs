@@ -21,15 +21,15 @@ function CheckForm(UserForm)
  	   is_ok = false;
 	    alert("Введите ваш e-mail!");
 	    UserForm.email.focus();
-}
-return is_ok;
-    } 
+    }
+    return is_ok;
+} 
 </script>
 </head>
 <body>
 <form onsubmit="return CheckForm(this)">
 Введите имя: &nbsp;<input type="text" name="name" size="20"><br>
-Ваш  E-mail: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email"  size="20"><br>
+Ваш  E-mail: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email"  size="20"><br>
 Комментарий:<textarea rows="3" name="Comment" cols="20"></textarea>
 <br>
 <input value="Отправить" type="submit"><br>
