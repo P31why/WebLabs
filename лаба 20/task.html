@@ -29,24 +29,52 @@
             <img class="hsl" id="handl" src="hand.png" width="200px" height="200px">
             <img class="hsr imMi" id="handr" src="hand copy.png" width="200px" height="200px">
         </div>
+        <button id="rev">Реверс</button>
+        <button id="em2">Взмах рукой</button>
+        <button id="stp">Остановить</button>
         <script>
             const lefthand = document.getElementById('handl');
             const righthand = document.getElementById('handr');
+            const buttRev=document.getElementById('rev');
+            const buttEm2=document.getElementById('em2');
+            const buttStop=document.getElementById('stp');
             let angle = 0;
-
+            var revers=-1;
+            var stop=1;
+            var stop2=1;
+            buttRev.addEventListener('click',function(){
+                if(revers===-1){
+                    revers=1;
+                }
+                else revers=-1;
+            });
+            buttEm2.addEventListener('click',function(){
+                if(stop===1){
+                    stop=0;
+                }
+                else{
+                    stop=1;
+                }
+            });
+            buttStop.addEventListener('click',function(){
+                if(stop2===1){
+                    stop2=0
+                }
+                else stop2=1
+            });
             function animate1() {
                 angle += 0.05;
                 const radius = 100;
-                const x = Math.cos(angle) * radius;
-                const y = Math.sin(angle) * radius;
+                const x = Math.cos(angle) * radius*stop2;
+                const y = Math.sin(angle) * radius*revers*stop * stop2;
                 lefthand.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
                 
                 requestAnimationFrame(animate1);
             }
             function animate2() {
                 const radius = 100;
-                const x = Math.cos(angle) * -radius;
-                const y = Math.sin(angle) * -radius;
+                const x = Math.cos(angle) * -radius*stop2;
+                const y = Math.sin(angle) * radius*revers*stop*stop2;
                 
                 righthand.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
                 requestAnimationFrame(animate2);
