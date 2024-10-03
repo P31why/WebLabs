@@ -5,43 +5,53 @@
             .box{
                 background-color: aqua;
             }
-            .hs{
-                margin-left: 470px;
-                margin-right: 470px;
+            .hsl{
+                position: absolute;
+                margin-left: 250px;
+                margin-top: 200px;
+            }
+            .hsr{
+                position: absolute;
+                margin-left: 750px;
+                margin-top: 200px;
+            }
+            .cola{
+                position: absolute;
+                margin-left: 500px;
+                margin-top: 200px;
             }
         </style>
     </head>
     <body>
-        <div class=".box">
-            <img id="hand" src="hand.png" width="200px" height="200px">
+        <div class="box">
+            <img class="cola" src="hh.gif" width="200px" height="200px">
+            <img class="hsl" id="handl" src="hand.png" width="200px" height="200px">
+            <img class="hsr" id="handr" src="hand.png" width="200px" height="200px">
         </div>
         <script>
-            var start = null;
-            var element = document.getElementById("cl");
-            var element = document.getElementById("hand");
-            function step(timestamp) {
-                if (!start) start = timestamp;
-                var progress = timestamp - start;
-                element.style.transform =
-                    "translateY(" + Math.min(progress / 5, 800) + "px)";
-                if (progress < 2000) {
-                    window.requestAnimationFrame(step);
-                }
-                else{
-                    window.requestAnimationFrame(step);
-                }
+            const lefthand = document.getElementById('handl');
+            const righthand = document.getElementById('handr');
+            let angle = 0;
+
+            function animate1() {
+                angle += 0.05;
+                const radius = 100;
+                const x = Math.cos(angle) * radius;
+                const y = Math.sin(angle) * radius;
+                lefthand.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+                
+                requestAnimationFrame(animate1);
             }
-            function step2(timestamp) {
-                if (!start) start = timestamp;
-                var progress = timestamp - start;
-                element.style.transform =
-                    "translateY(" + Math.min(progress + 5, 800) - "px)";
-                if (progress < 2000) {
-                    window.requestAnimationFrame(step2);
-                }
+            function animate2() {
+                const radius = 100;
+                const x = Math.cos(angle) * -radius;
+                const y = Math.sin(angle) * -radius;
+                
+                righthand.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+                requestAnimationFrame(animate2);
             }
-            window.requestAnimationFrame(step);
-            window.requestAnimationFrame(step2);
+            animate1();
+            animate2();
         </script>
         
     </body>
