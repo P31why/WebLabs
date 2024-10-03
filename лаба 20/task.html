@@ -7,13 +7,14 @@
             }
             .hsl{
                 position: absolute;
-                margin-left: 250px;
+                margin-left: 270px;
                 margin-top: 200px;
             }
             .hsr{
                 position: absolute;
-                margin-left: 750px;
+                margin-left: 730px;
                 margin-top: 200px;
+                
             }
             .cola{
                 position: absolute;
@@ -26,7 +27,7 @@
         <div class="box">
             <img class="cola" src="hh.gif" width="200px" height="200px">
             <img class="hsl" id="handl" src="hand.png" width="200px" height="200px">
-            <img class="hsr" id="handr" src="hand.png" width="200px" height="200px">
+            <img class="hsr imMi" id="handr" src="hand copy.png" width="200px" height="200px">
         </div>
         <script>
             const lefthand = document.getElementById('handl');
@@ -56,28 +57,3 @@
         
     </body>
 </html>
-<script>/*
-    const circle = document.getElementById('circle');
-    let start = null;
-    const duration = 3000; 
-
-    function animate(timestamp) {
-        if (!start) start = timestamp;
-        const progress = timestamp - start;
-
-        
-        const top = Math.min(100, (progress / duration) * 100);
-        const scale = 1 - (progress / duration) * 0.9;
-        circle.style.top = top + '%';
-        circle.style.transform = scale(${scale}) rotate(${progress / duration * 360}deg);
-
-        if (progress < duration) {
-            requestAnimationFrame(animate);
-        } else {
-            start = null; 
-            requestAnimationFrame(animate); 
-        }
-    }
-
-    requestAnimationFrame(animate);*/
-</script>
