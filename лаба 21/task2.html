@@ -2,21 +2,24 @@
 <head>
 <script>
 var s=0
+var r=6;
 function move()
 {
- if (s!=3) 
-  {var a=f.left.value
-   f.right.options[s].text=a
-   s=s+1
-    }
+ if (s!==3) 
+  {var a=f.left.value;
+   f.right.options[s].text=a;
+   s=s+1;
+   f.left.value=this.innerHTML;
+
+}
  else
   {alert("Максимум три предмета")}
 }
 function del()
 {
  if (s>=1)
-  {f.right.options[s-1].text=''
-   s=s-1}
+  {f.right.options[s-1].text='';
+   s=s-1;}
 }
 </script>
 </head>
