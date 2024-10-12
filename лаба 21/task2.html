@@ -1,23 +1,41 @@
 <html>
 <head>
 <script>
-var s=0
-var r=6;
-function move()
-{
- if (s!==3) 
-  {var a=f.left.value;
-   f.right.options[s].text=a;
-   s=s+1;
+var s=0;
+function move() {
+    if (s != 3) {
+        var a = f.left.value;
+        f.right.options[s].text = a;
+        removeOption(f.left, a);
+        s = s + 1;
+    } else {
+        alert("Максимум три предмета");
+    }
 }
- else
-  {alert("Максимум три предмета")}
+
+function del() {
+    if (s >= 1) {
+        var a = f.right.options[s-1].text;
+        addOption(f.left, a);
+        f.right.options[s-1].text = '';
+        s = s - 1;
+    }
 }
-function del()
-{
- if (s>=1)
-  {f.right.options[s-1].text='';
-   s=s-1;}
+
+function removeOption(select, value) {
+    for (var i = 0; i < select.options.length; i++) {
+        if (select.options[i].value == value) {
+            select.remove(i);
+            break;
+        }
+    }
+}
+
+function addOption(select, value) {
+    var option = document.createElement("option");
+    option.text = value;
+    option.value = value;
+    select.add(option);
 }
 </script>
 </head>
