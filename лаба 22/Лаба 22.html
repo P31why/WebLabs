@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Левкович Т-193</title>
+</head>
+
+<body>
+    <div id="str">
+        <h2>до</h2>
+    </div>
+    <div id="res">
+        <h2>после</h2>
+    </div>
+    <script>
+        var str1 = 'ahb acb aeb aeeb adcb axeb';
+        document.getElementById('str').innerHTML += '<div class="result">' + str1 + '</div>';
+        var regex1 = /a.b/g;
+        document.getElementById('res').innerHTML += '<div class="result">' + str1.match(regex1) + '</div>';
+
+
+        var str2 = 'aba aca aea abba adca abea';
+        document.getElementById('str').innerHTML += '<div class="result">' + str2 + '</div>';
+        var regex2 = /a..a/g;
+        document.getElementById('res').innerHTML += '<div class="result">' + str2.match(regex2) + '</div>';
+        
+
+
+        var str3 = '23 2+3 2++3 2+++3 345 567';
+        document.getElementById('str').innerHTML += '<div class="result">' + str3 + '</div>';
+        var regex3 = /ab.a/g;
+        document.getElementById('res').innerHTML += '<div class="result">' + str3.match(regex3) + '</div>';
+
+
+        var str4 = 'a.a aba aea';
+        document.getElementById('str').innerHTML += '<div class="result">' + str4 + '</div>';
+        var regex4 = /a\.a/g;
+        document.getElementById('res').innerHTML += '<div class="result">' + str4.match(regex4) + '</div>';
+
+
+        var str5 = '2+3 223 2223';
+        document.getElementById('str').innerHTML += '<div class="result">' + str5 + '</div>';
+        var regex5 = /2\+3/g;
+        document.getElementById('res').innerHTML += '<div class="result">' + str5.match(regex5) + '</div>';
+
+
+        var str6 = '23 2+3 2++3 2+++3 345 567';
+        document.getElementById('str').innerHTML += '<div class="result">' + str6 + '</div>';
+        var regex6 = /2\+{1,3}3/g;
+        document.getElementById('res').innerHTML += '<div class="result">' + str6.match(regex6) + '</div>';
+
+
+        var str7 = '23 2+3 2++3 2+++3 445 677';
+        document.getElementById('str').innerHTML += '<div class="result">' + str7 + '</div>';
+        var regex7 = /2\+*3/g;
+        document.getElementById('res').innerHTML += '<div class="result">' + str7.match(regex7) + '</div>';
+    </script>
+</body>
+
+</html>

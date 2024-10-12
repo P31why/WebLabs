@@ -7,6 +7,10 @@
         <button id="ts3">Задание 3</button>
         <button id="ts4">Задание 4</button>
         <script>
+            const but1=document.getElementById('ts1');
+            const but2=document.getElementById('ts2');
+            const but3=document.getElementById('ts3');
+            const but4=document.getElementById('ts4');
             function num1(){
                 let student = {
                 name: 'John',
@@ -25,12 +29,17 @@
                     number: 23,
                     participants: ["john", "ann"]  }};
                 alert( JSON.stringify(meetup) );
-                /* вся структура преобразована в строку:{
-                "title":"Conference",
-                "room":{"number":23,"participants":["john","ann"]},}*/
-
+            }
+            function num3(){
 
             }
+            function num4(){
+
+            }
+            but1.addEventListener('click',num1);
+            but2.addEventListener('click',num2);
+            but3.addEventListener('click',num3);
+            but4.addEventListener('click',num4);
         </script>
     </body>
 </html>
