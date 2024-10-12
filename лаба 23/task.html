@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <button id="ts1">Задание 1</button>
+        <button id="ts2">Задание 2</button>
+        <button id="ts3">Задание 3</button>
+        <button id="ts4">Задание 4</button>
+        <script>
+            function num1(){
+                let student = {
+                name: 'John',
+                age: 30,
+                isAdmin: false,
+                courses: ['html', 'css', 'js'],
+                wife: null};
+                let json = JSON.stringify(student);
+                alert(typeof json);
+                alert(json);
+            }
+            function num2(){
+                let meetup = {
+                title: "Conference",
+                room: {
+                    number: 23,
+                    participants: ["john", "ann"]  }};
+                alert( JSON.stringify(meetup) );
+                /* вся структура преобразована в строку:{
+                "title":"Conference",
+                "room":{"number":23,"participants":["john","ann"]},}*/
+
+
+            }
+        </script>
+    </body>
+</html>
