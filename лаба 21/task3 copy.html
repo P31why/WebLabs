@@ -1,0 +1,29 @@
+<html>
+<head>
+<script>
+function updateSections() {
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    var selectedSections = [];
+    checkboxes.forEach(function(checkbox) {
+        if (checkbox.checked) {
+            selectedSections.push(checkbox.value);
+        }
+    });
+    document.getElementById('output').value = selectedSections.join(', ');
+}
+</script>
+</head>
+<body>
+<h3>Разделы студенческой газеты</h3>
+<form>
+    <label><input type="checkbox" value="Новости" onclick="updateSections()"> Новости</label><br>
+    <label><input type="checkbox" value="Гости" onclick="updateSections()"> Гости</label><br>
+    <label><input type="checkbox" value="Награждения" onclick="updateSections()"> Награждения</label><br>
+    <label><input type="checkbox" value="Образование" onclick="updateSections()"> Образование</label><br>
+    <label><input type="checkbox" value="Досуг" onclick="updateSections()"> Досуг</label><br>
+    <label><input type="checkbox" value="Развлечения" onclick="updateSections()"> Развлечения</label><br>
+    <label><input type="checkbox" value="Карьера" onclick="updateSections()"> Карьера</label><br>
+</form>
+<textarea id="output" rows="4" cols="50" readonly></textarea>
+</body>
+</html>
