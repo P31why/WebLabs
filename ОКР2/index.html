@@ -3,14 +3,25 @@
     <head>
         <script type="text/javascript" src="script.js"></script>
         <title>Левкович Т-193</title>
+        <style>
+            body{
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .button{
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: large;
+                width: 100px;
+                height: 30px;
+            }
+        </style>
     </head>
     <body>
         <h2>Подготовка к ОКР</h2>
         <hr>
         Введите чило дня недели:<input id="dayInput" type="number"><br><br>
-        <input type="button" value="Claculate" onclick="DayOfWeek();">
+        <input class="button"type="button" value="Claculate" onclick="DayOfWeek();">
         <hr>
         Введите число для подсчета факториала:<input id="numInput" type="number"><br><br>
-        <input type="button" value="Claculate" onclick="FactorialCalc();">
+        <input class="button" type="button" value="Claculate" onclick="FactorialCalc();">
     </body>
 </html>
