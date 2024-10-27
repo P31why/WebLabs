@@ -47,3 +47,11 @@ function DayOfWeek(){
         
     }
 }
+function FactorialCalc(){
+    var num=parseInt(document.getElementById('numInput').value);
+    var fac=1;
+    for(var i=1; i<=num;i++){
+        fac*=i;
+    }
+    alert(fac);
+}
